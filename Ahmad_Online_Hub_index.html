@@ -1,0 +1,2841 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="description" content="Ahmad Online Hub — free online tools, digital services and business resources.">
+<meta name="theme-color" content="#0f172a">
+
+<meta property="og:title" content="Ahmad Online Hub — Pro">
+<meta property="og:description" content="Free tools, digital services and online resources.">
+
+<title>Ahmad Online Hub — Pro</title>
+
+<style>
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+font-family:Inter,Arial,sans-serif;
+background:#f5f7fb;
+color:#172033
+}
+
+:root{
+--p:#2563eb;
+--p2:#1d4ed8;
+--dark:#0f172a;
+--muted:#64748b;
+--card:#fff;
+--line:#e5e7eb
+}
+
+header{
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+color:#fff;
+padding:18px 6%;
+position:sticky;
+top:0;
+z-index:20;
+box-shadow:0 5px 20px #0002
+}
+
+.nav{
+max-width:1200px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px
+}
+
+.logo{
+font-weight:900;
+font-size:22px
+}
+
+.nav a{
+color:#dbeafe;
+text-decoration:none;
+margin:0 8px;
+font-size:14px;
+font-weight:700;
+transition:.2s
+}
+
+.nav a:hover{
+color:#fff
+}
+
+.menu{
+display:none;
+background:none;
+color:#fff;
+border:0;
+font-size:22px
+}
+
+.btn{
+border:0;
+border-radius:10px;
+padding:12px 18px;
+font-weight:800;
+cursor:pointer;
+text-decoration:none;
+display:inline-block
+}
+
+.primary{
+background:var(--p);
+color:#fff
+}
+
+.white{
+background:#fff;
+color:var(--dark)
+}
+
+/* ===== Phase 1 Upgrade ===== */
+
+body.dark{
+--card:#111827;
+--line:#334155;
+--muted:#94a3b8;
+background:#020617;
+color:#e5e7eb
+}
+
+body.dark header{
+background:linear-gradient(135deg,#020617,#172554)
+}
+
+body.dark .hero{
+background:linear-gradient(135deg,#0f172a,#111827)
+}
+
+body.dark .hero p,
+body.dark .sub{
+color:#cbd5e1
+}
+
+body.dark .card,
+body.dark .modal,
+body.dark .dashboard{
+background:#111827;
+color:#e5e7eb
+}
+
+body.dark .result{
+background:#1e293b;
+color:#e2e8f0
+}
+
+body.dark .tool input,
+body.dark .tool textarea,
+body.dark .tool select,
+body.dark .modal input,
+body.dark .modal textarea{
+background:#0f172a;
+color:#e5e7eb;
+border-color:#475569
+}
+
+body.dark .faq details{
+background:#111827;
+border-color:#334155
+}
+
+body.dark .trust span{
+background:#0f172a;
+color:#cbd5e1;
+border-color:#334155
+}
+
+body.dark .cta{
+background:#172554
+}
+
+body.dark .white{
+background:#e5e7eb;
+color:#0f172a
+}
+
+body.dark .badge{
+background:#172554;
+color:#bfdbfe
+}
+
+body.dark footer{
+background:#020617
+}
+
+.top-actions{
+display:flex;
+align-items:center;
+gap:8px
+}
+
+.theme-btn{
+width:42px;
+height:42px;
+border:1px solid #ffffff33;
+background:#ffffff12;
+color:#fff;
+border-radius:10px;
+cursor:pointer;
+font-size:18px
+}
+
+.tool-search{
+max-width:650px;
+margin:0 auto 25px
+}
+
+.tool-search input{
+width:100%;
+padding:15px 18px;
+border-radius:14px;
+border:1px solid #cbd5e1;
+font-size:16px;
+outline:none;
+background:#fff
+}
+
+body.dark .tool-search input{
+background:#0f172a;
+color:#fff;
+border-color:#475569
+}
+
+.tool.hidden{
+display:none
+}
+
+#noTools{
+padding:20px
+}
+
+/* ===== Hero ===== */
+
+.hero{
+padding:85px 6%;
+background:linear-gradient(135deg,#eff6ff,#eef2ff);
+position:relative;
+overflow:hidden
+}
+
+.hero:before,
+.hero:after{
+content:"";
+position:absolute;
+border-radius:50%;
+filter:blur(3px);
+opacity:.45;
+pointer-events:none
+}
+
+.hero:before{
+width:280px;
+height:280px;
+background:#bfdbfe;
+right:-80px;
+top:-80px
+}
+
+.hero:after{
+width:220px;
+height:220px;
+background:#c7d2fe;
+left:-90px;
+bottom:-100px
+}
+
+.hero-inner{
+max-width:1200px;
+margin:auto;
+position:relative;
+z-index:1
+}
+
+.badge{
+display:inline-block;
+padding:7px 12px;
+border-radius:99px;
+background:#dbeafe;
+color:#1d4ed8;
+font-weight:800;
+font-size:12px
+}
+
+.hero h1{
+font-size:clamp(38px,7vw,70px);
+line-height:1.02;
+margin:18px 0;
+letter-spacing:-1.5px
+}
+
+.hero p{
+max-width:720px;
+color:#475569;
+font-size:18px;
+line-height:1.7
+}
+
+.actions{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:25px
+}
+
+section{
+max-width:1200px;
+margin:auto;
+padding:70px 6%
+}
+
+h2{
+text-align:center;
+font-size:36px;
+margin:0 0 10px
+}
+
+.sub{
+text-align:center;
+color:var(--muted);
+margin:0 auto 35px;
+max-width:700px
+}
+
+.grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+gap:20px
+}
+
+.card{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:18px;
+padding:24px;
+box-shadow:0 10px 30px #0f172a0a;
+transition:
+transform .2s,
+box-shadow .2s,
+border-color .2s
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 18px 40px #0f172a18;
+border-color:#bfdbfe
+}
+
+.card h3{
+margin:0 0 10px
+}
+
+.card p{
+color:var(--muted);
+line-height:1.55
+}
+
+.icon{
+font-size:30px
+}
+
+.tool input,
+.tool textarea,
+.tool select,
+.modal input,
+.modal textarea{
+width:100%;
+padding:12px;
+border:1px solid #cbd5e1;
+border-radius:9px;
+margin:7px 0;
+font-size:15px
+}
+
+.result{
+background:#f1f5f9;
+padding:12px;
+border-radius:9px;
+margin-top:8px;
+font-weight:700;
+min-height:20px
+}
+
+.pricing .card{
+text-align:center
+}
+
+.price{
+font-size:38px;
+font-weight:900;
+margin:12px;
+transition:.2s
+}
+
+.featured{
+border:2px solid var(--p);
+transform:translateY(-5px)
+}
+
+.featured:hover{
+transform:translateY(-9px)
+}
+
+.cta{
+background:#dbeafe;
+border-radius:22px;
+padding:40px;
+text-align:center
+}
+
+footer{
+background:#0f172a;
+color:#cbd5e1;
+padding:45px 6%;
+text-align:center
+}
+
+.footer-links a{
+color:#cbd5e1;
+margin:0 8px;
+text-decoration:none
+}
+
+.modal-bg{
+display:none;
+position:fixed;
+inset:0;
+background:#0008;
+z-index:50;
+align-items:center;
+justify-content:center;
+padding:20px
+}
+
+.modal{
+background:#fff;
+width:min(430px,100%);
+border-radius:18px;
+padding:28px
+}
+
+.close{
+float:right;
+border:0;
+background:none;
+font-size:24px;
+cursor:pointer
+}
+
+.dashboard{
+display:none;
+background:#fff;
+border:1px solid var(--line);
+border-radius:18px;
+padding:25px;
+margin-top:25px
+}
+
+.userbox{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:15px
+}
+
+.whatsapp-float{
+position:fixed;
+right:18px;
+bottom:18px;
+z-index:100;
+background:#25D366;
+color:white;
+text-decoration:none;
+padding:14px 18px;
+border-radius:999px;
+font-weight:900;
+box-shadow:0 8px 25px #0003;
+display:flex;
+gap:8px;
+align-items:center
+}
+
+.whatsapp-float:hover{
+transform:translateY(-2px)
+}
+
+.service-price{
+font-size:26px;
+font-weight:900;
+margin:12px 0;
+color:#1d4ed8
+}
+
+.section-tag{
+display:block;
+text-align:center;
+color:#2563eb;
+font-weight:900;
+font-size:12px;
+letter-spacing:1.5px;
+text-transform:uppercase;
+margin-bottom:8px
+}
+
+.trust{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+margin-top:24px;
+color:#475569;
+font-size:13px;
+font-weight:700
+}
+
+.trust span{
+background:#fff;
+border:1px solid #dbeafe;
+padding:8px 12px;
+border-radius:999px
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin-top:28px;
+max-width:650px
+}
+
+.stat{
+background:#ffffffaa;
+border:1px solid #dbeafe;
+border-radius:14px;
+padding:15px;
+text-align:center
+}
+
+.stat b{
+display:block;
+font-size:22px;
+color:#1d4ed8
+}
+
+.stat small{
+color:#64748b
+}
+
+.faq{
+max-width:850px;
+margin:auto
+}
+
+.faq details{
+background:#fff;
+border:1px solid #e5e7eb;
+border-radius:12px;
+padding:16px 18px;
+margin:10px 0
+}
+
+.faq summary{
+cursor:pointer;
+font-weight:800
+}
+
+.testimonial{
+position:relative
+}
+
+.stars{
+letter-spacing:2px
+}
+
+.service-note{
+text-align:center;
+margin-top:25px;
+color:#64748b;
+font-size:13px
+}
+
+
+/* ===== Phase 5: AI Tools Hub ===== */
+.ai-hub{
+  background:linear-gradient(135deg,#eef2ff,#f8fafc);
+  border:1px solid #dbeafe;
+  border-radius:28px;
+  padding:34px;
+  margin-top:10px;
+}
+body.dark .ai-hub{
+  background:linear-gradient(135deg,#0f172a,#111827);
+  border-color:#334155;
+}
+.ai-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:7px 12px;border-radius:999px;
+  background:#e0e7ff;color:#3730a3;font-weight:900;font-size:12px;
+}
+body.dark .ai-badge{background:#1e1b4b;color:#c7d2fe}
+.ai-tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:25px}
+.ai-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 10px 30px #0f172a0a}
+.ai-card h3{margin:8px 0}
+.ai-card p{color:var(--muted);line-height:1.5}
+.ai-card textarea,.ai-card input,.ai-card select{
+  width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:10px;
+  margin:7px 0;font:inherit;background:var(--card);color:inherit;
+}
+.ai-output{
+  min-height:70px;margin-top:9px;padding:12px;border-radius:10px;
+  background:#f1f5f9;white-space:pre-wrap;line-height:1.5;
+}
+body.dark .ai-output{background:#1e293b}
+.ai-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:5px}
+.ai-note{font-size:12px;color:var(--muted);margin-top:18px;text-align:center}
+.ai-status{font-size:12px;font-weight:800;margin-top:8px}
+@media(max-width:750px){
+  .ai-hub{padding:22px}
+}
+
+@media(max-width:750px){
+
+.navlinks{
+display:none;
+position:absolute;
+top:68px;
+left:0;
+right:0;
+background:#0f172a;
+padding:14px 5%;
+box-shadow:0 12px 25px #0003
+}
+
+.navlinks.open{
+display:block
+}
+
+.navlinks a{
+display:block;
+padding:12px 0
+}
+
+.navlinks .btn{
+width:100%;
+margin:8px 0
+}
+
+.menu{
+display:block
+}
+
+.hero{
+padding:65px 5%
+}
+
+section{
+padding:55px 5%
+}
+
+.stats{
+grid-template-columns:1fr
+}
+
+.trust{
+justify-content:flex-start
+}
+
+.top-actions{
+gap:5px
+}
+
+.theme-btn{
+width:38px;
+height:38px
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="nav">
+
+<div class="logo">
+🚀 Ahmad Online Hub
+</div>
+
+<div class="navlinks" id="navlinks">
+
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#tools">Tools</a>
+<a href="#ai-tools">🤖 AI Hub</a>
+<a href="#pricing">Pricing</a>
+<a href="#reviews">Reviews</a>
+<a href="#faq">FAQ</a>
+<a href="#affiliate">Affiliate</a>
+<a href="#contact">Contact</a>
+
+<div class="top-actions">
+
+<button
+class="theme-btn"
+id="themeBtn"
+onclick="toggleTheme()"
+aria-label="Toggle dark mode">
+🌙
+</button>
+
+<button
+class="btn white"
+onclick="openModal('login')">
+Login
+</button>
+
+</div>
+
+</div>
+
+<button
+class="menu"
+onclick="toggleNav()">
+☰
+</button>
+
+</div>
+
+</header>
+
+<main id="home">
+
+<div class="hero">
+
+<div class="hero-inner">
+
+<span class="badge">
+🚀 FREE ONLINE PLATFORM
+</span>
+
+<h1>
+Build Your Digital Presence With Ahmad Online Hub.
+</h1>
+
+<p>
+Useful browser tools, digital services and business resources
+in one modern platform. Start free and expand as your business grows.
+</p>
+
+<div class="actions">
+
+<a
+class="btn primary"
+href="#tools">
+Explore Free Tools
+</a>
+
+<button
+class="btn white"
+onclick="openModal('signup')">
+Create Free Account
+</button>
+
+</div>
+
+<div class="trust">
+
+<span>✓ No installation</span>
+<span>✓ Mobile friendly</span>
+<span>✓ Fast & simple</span>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<b>31+</b>
+<small>Free & AI tools</small>
+</div>
+
+<div class="stat">
+<b>4</b>
+<small>Digital services</small>
+</div>
+
+<div class="stat">
+<b>24/7</b>
+<small>Online access</small>
+</div>
+
+</div>
+
+<div
+class="dashboard"
+id="dashboard">
+
+<div class="userbox">
+
+<div>
+<b id="welcome">
+Welcome!
+</b>
+<br>
+<small>
+Your demo dashboard is active.
+</small>
+</div>
+
+<button
+class="btn primary"
+onclick="logout()">
+Logout
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+  </div>
+  <section id="services">
+
+<span class="section-tag">OUR SERVICES</span>
+
+<h2>Digital Services</h2>
+
+<p class="sub">
+Starter services you can customize and sell through your own website.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">🌐</div>
+<h3>Basic Website</h3>
+<div class="service-price">From $25</div>
+
+<p>
+Simple responsive landing page for a small business or personal project.
+</p>
+
+<a class="btn primary"
+href="https://wa.me/923061050895?text=I%20want%20the%20Basic%20Website%20service."
+target="_blank"
+rel="noopener">
+Order on WhatsApp
+</a>
+</div>
+
+
+<div class="card">
+<div class="icon">✍️</div>
+<h3>Content Writing</h3>
+<div class="service-price">From $10</div>
+
+<p>
+Website text, product descriptions and basic social media copy.
+</p>
+
+<a class="btn primary"
+href="https://wa.me/923061050895?text=I%20want%20the%20Content%20Writing%20service."
+target="_blank"
+rel="noopener">
+Order on WhatsApp
+</a>
+</div>
+
+
+<div class="card">
+<div class="icon">🎨</div>
+<h3>Design Support</h3>
+<div class="service-price">From $15</div>
+
+<p>
+Simple social posts, banners and promotional design concepts.
+</p>
+
+<a class="btn primary"
+href="https://wa.me/923061050895?text=I%20want%20the%20Design%20Support%20service."
+target="_blank"
+rel="noopener">
+Order on WhatsApp
+</a>
+</div>
+
+
+<div class="card">
+<div class="icon">📊</div>
+<h3>Business Tools</h3>
+<div class="service-price">From $10</div>
+
+<p>
+Custom calculators, forms and simple productivity tools.
+</p>
+
+<a class="btn primary"
+href="https://wa.me/923061050895?text=I%20want%20the%20Business%20Tools%20service."
+target="_blank"
+rel="noopener">
+Order on WhatsApp
+</a>
+</div>
+
+</div>
+
+<p class="service-note">
+💬 Fast ordering available through WhatsApp.
+</p>
+
+</section>
+
+
+<section id="tools">
+
+<span class="section-tag">FREE TOOLS</span>
+
+<h2>Useful Online Tools</h2>
+
+<p class="sub">
+Search a tool below and use it directly in your browser.
+</p>
+
+<div class="tool-search">
+<input
+id="toolSearch"
+type="search"
+placeholder="🔎 Search tools..."
+oninput="searchTools()">
+</div>
+
+<div class="grid" id="toolGrid">
+
+
+<div class="card tool" data-name="calculator math calculate">
+
+<h3>🔢 Calculator</h3>
+
+<input
+id="calc"
+placeholder="25*4+10">
+
+<button
+class="btn primary"
+onclick="calculate()">
+Calculate
+</button>
+
+<div
+class="result"
+id="calcOut">
+</div>
+
+</div>
+
+
+<div class="card tool" data-name="word counter text">
+
+<h3>🔤 Word Counter</h3>
+
+<textarea
+id="text"
+rows="5"
+placeholder="Type or paste text"></textarea>
+
+<div
+class="result"
+id="count">
+Words: 0 | Characters: 0
+</div>
+
+</div>
+
+
+<div class="card tool" data-name="password generator security">
+
+<h3>🔐 Password Generator</h3>
+
+<select id="len">
+
+<option>8</option>
+<option selected>12</option>
+<option>16</option>
+<option>20</option>
+
+</select>
+
+<button
+class="btn primary"
+onclick="password()">
+Generate Password
+</button>
+
+<div
+class="result"
+id="pass">
+</div>
+
+</div>
+
+
+<div class="card tool" data-name="age calculator birthday">
+
+<h3>📅 Age Calculator</h3>
+
+<input
+type="date"
+id="dob">
+
+<button
+class="btn primary"
+onclick="age()">
+Calculate Age
+</button>
+
+<div
+class="result"
+id="ageOut">
+</div>
+
+</div>
+
+
+<div class="card tool" data-name="unit converter kilometers miles">
+
+<h3>📏 Unit Converter</h3>
+
+<input
+id="km"
+type="number"
+placeholder="Kilometers">
+
+<button
+class="btn primary"
+onclick="convert()">
+Convert to miles
+</button>
+
+<div
+class="result"
+id="conv">
+</div>
+
+</div>
+
+
+<div class="card tool" data-name="percentage calculator percent">
+
+<h3>💰 Percentage Calculator</h3>
+
+<input
+id="pct"
+type="number"
+placeholder="Percentage">
+
+<input
+id="num"
+type="number"
+placeholder="Number">
+
+<button
+class="btn primary"
+onclick="percent()">
+Calculate
+</button>
+
+<div
+class="result"
+id="pctOut">
+</div>
+
+</div>
+
+
+<div class="card tool" data-name="bmi body mass index health">
+
+<h3>⚖️ BMI Calculator</h3>
+
+<input
+id="weight"
+type="number"
+placeholder="Weight (kg)">
+
+<input
+id="height"
+type="number"
+placeholder="Height (cm)">
+
+<button
+class="btn primary"
+onclick="bmi()">
+Calculate BMI
+</button>
+
+<div
+class="result"
+id="bmiOut">
+</div>
+
+</div>
+
+
+<div class="card tool" data-name="case converter uppercase lowercase text">
+
+<h3>🔠 Case Converter</h3>
+
+<textarea
+id="caseText"
+rows="4"
+placeholder="Enter your text"></textarea>
+
+<button
+class="btn primary"
+onclick="upperCase()">
+UPPERCASE
+</button>
+
+<button
+class="btn primary"
+onclick="lowerCase()">
+lowercase
+</button>
+
+<div
+class="result"
+id="caseOut">
+</div>
+
+</div>
+
+
+<div class="card tool" data-name="random number generator random">
+
+<h3>🎲 Random Number</h3>
+
+<input
+id="minNum"
+type="number"
+placeholder="Minimum">
+
+<input
+id="maxNum"
+type="number"
+placeholder="Maximum">
+
+<button
+class="btn primary"
+onclick="randomNumber()">
+Generate
+</button>
+
+<div
+class="result"
+id="randomOut">
+</div>
+
+</div>
+
+</div>
+
+<p
+class="service-note"
+id="noTools"
+style="display:none">
+❌ No tool found. Try another search.
+</p>
+
+</section>
+
+
+
+
+<section id="ai-tools">
+  <span class="section-tag">PHASE 5 • AI & SMART TOOLS</span>
+  <h2>🤖 Ahmad AI Tools Hub</h2>
+  <p class="sub">
+    AI-powered and browser-based tools for writing, images, PDFs, voice, translation and more.
+  </p>
+
+  <div class="ai-hub">
+    <span class="ai-badge">✨ 12 Smart Tools</span>
+
+    <div class="tool-search" style="margin-top:20px">
+      <input id="aiToolSearch" type="search" placeholder="🔍 Search AI tools..." oninput="searchAITools()">
+    </div>
+
+    <div class="ai-tools-grid" id="aiToolsGrid">
+
+      <div class="ai-card ai-tool-card" data-ai-name="ai chat chatbot assistant">
+        <div class="icon">🤖</div><h3>AI Chat</h3>
+        <p>Chat-style interface ready for secure AI API integration.</p>
+        <textarea id="chatInput" rows="3" placeholder="Ask something..."></textarea>
+        <button class="btn primary" onclick="aiChatDemo()">Send</button>
+        <div class="ai-output" id="chatOut">AI response will appear here.</div>
+      </div>
+
+      <div class="ai-card ai-tool-card" data-ai-name="ai writer writing content copy">
+        <div class="icon">✍️</div><h3>AI Writer</h3>
+        <p>Create a structured draft from a topic and tone.</p>
+        <textarea id="writerTopic" rows="3" placeholder="Write about..."></textarea>
+        <select id="writerTone"><option>Professional</option><option>Friendly</option><option>Marketing</option><option>Short</option></select>
+        <button class="btn primary" onclick="aiWriter()">Generate</button>
+        <div class="ai-output" id="writerOut">Your draft will appear here.</div>
+      </div>
+
+      <div class="ai-card ai-tool-card" data-ai-name="ai image generator image">
+        <div class="icon">🖼️</div><h3>AI Image Generator</h3>
+        <p>Prompt builder ready for a secure image-generation API.</p>
+        <textarea id="imagePrompt" rows="3" placeholder="A modern business website hero image..."></textarea>
+        <button class="btn primary" onclick="buildImagePrompt()">Create Prompt</button>
+        <div class="ai-output" id="imageOut">Your image prompt will appear here.</div>
+      </div>
+
+      <div class="ai-card ai-tool-card" data-ai-name="background remover remove background">
+        <div class="icon">🪄</div><h3>Background Remover</h3>
+        <p>Prepare an image locally and download a transparent-style PNG preview.</p>
+        <input id="bgFile" type="file" accept="image/*">
+        <button class="btn primary" onclick="backgroundTool()">Process Image</button>
+        <div class="ai-output" id="bgOut">Choose an image to begin.</div>
+      </div>
+
+      <div class="ai-card ai-tool-card" data-ai-name="pdf pdf tools merge split">
+        <div class="icon">📄</div><h3>PDF Tools</h3>
+        <p>Quick PDF actions and a browser-friendly PDF text helper.</p>
+        <input id="pdfFile" type="file" accept="application/pdf">
+        <button class="btn primary" onclick="pdfTool()">Check PDF</button>
+        <div class="ai-output" id="pdfOut">Choose a PDF file.</div>
+      </div>
+
+      <div class="ai-card ai-tool-card" data-ai-name="qr qr code generator">
+        <div class="icon">🔳</div><h3>QR Code Generator</h3>
+        <p>Generate a QR code for links or text.</p>
+        <input id="qrText2" placeholder="https://example.com">
+        <button class="btn primary" onclick="makeQR2()">Generate QR</button>
+        <div class="ai-output" id="qrOut2" style="text-align:center"></div>
+      </div>
+
+      <div class="ai-card ai-tool-card" data-ai-name="image compressor compress image">
+        <div class="icon">🗜️</div><h3>Image Compressor</h3>
+        <p>Compress images locally before uploading them.</p>
+        <input id="compressFile2" type="file" accept="image/*">
+        <select id="compressQuality2"><option value=".8">High</option><option value=".6" selected>Balanced</option><option value=".4">Small</option></select>
+        <button class="btn primary" onclick="compressImage2()">Compress</button>
+        <div class="ai-output" id="compressOut2">Choose an image.</div>
+      </div>
+
+      <div class="ai-card ai-tool-card" data-ai-name="text to speech tts voice">
+        <div class="icon">🎙️</div><h3>Text-to-Speech</h3>
+        <p>Read text aloud using your device browser.</p>
+        <textarea id="tts2" rows="3" placeholder="Type text..."></textarea>
+        <button class="btn primary" onclick="speak2()">🔊 Speak</button>
+        <button class="btn white" onclick="stop2()">⏹ Stop</button>
+        <div class="ai-status" id="ttsStatus2"></div>
+      </div>
+
+      <div class="ai-card ai-tool-card" data-ai-name="speech to text voice recognition">
+        <div class="icon">🗣️</div><h3>Speech-to-Text</h3>
+        <p>Use your microphone to convert speech into text when supported.</p>
+        <button class="btn primary" onclick="speech2()">🎙️ Start</button>
+        <div class="ai-output" id="speechOut2">Your speech will appear here.</div>
+      </div>
+
+      <div class="ai-card ai-tool-card" data-ai-name="translator translation languages">
+        <div class="icon">🌐</div><h3>Translator</h3>
+        <p>Translation interface ready for API integration.</p>
+        <textarea id="transText" rows="3" placeholder="Enter text..."></textarea>
+        <select id="transLang"><option value="Urdu">Urdu</option><option value="English">English</option><option value="Arabic">Arabic</option><option value="Punjabi">Punjabi</option></select>
+        <button class="btn primary" onclick="translateDemo()">Translate</button>
+        <div class="ai-output" id="transOut">Translation result will appear here.</div>
+      </div>
+
+      <div class="ai-card ai-tool-card" data-ai-name="ai search search filter">
+        <div class="icon">🔍</div><h3>AI-Powered Search</h3>
+        <p>Search all AI tools instantly by name or keyword.</p>
+        <input id="aiSearch2" placeholder="Try: image, voice, pdf..." oninput="searchAITools(this.value)">
+        <div class="ai-output" id="searchOut">Start typing to filter the AI hub.</div>
+      </div>
+
+      <div class="ai-card ai-tool-card" data-ai-name="mobile responsive modern ui">
+        <div class="icon">📱</div><h3>Mobile-Friendly AI Hub</h3>
+        <p>Responsive cards, touch-friendly controls and dark-mode support.</p>
+        <button class="btn primary" onclick="mobileInfo()">Check Layout</button>
+        <div class="ai-output" id="mobileOut">Optimized for phones and desktop screens.</div>
+      </div>
+
+    </div>
+
+    <p class="ai-note">
+      🔒 Security: real AI Chat, Image Generation and Translation APIs should run through a secure backend.
+      Never put private API keys directly into GitHub Pages JavaScript.
+    </p>
+  </div>
+</section>
+
+
+<section id="more-tools">
+  <span class="section-tag">MORE FREE TOOLS</span>
+  <h2>🛠️ More Free Tools</h2>
+  <p class="sub">Useful everyday utilities for images, PDFs, text, passwords, QR codes and links.</p>
+
+  <div class="ai-hub">
+    <div class="ai-tools-grid">
+
+      <div class="ai-card">
+        <div class="icon">🖼️➡️📄</div>
+        <h3>Image → PDF</h3>
+        <p>Select an image and create a printable PDF.</p>
+        <input id="imgPdfFile" type="file" accept="image/*">
+        <button class="btn primary" onclick="imageToPDF()">Create PDF</button>
+        <div class="ai-output" id="imgPdfOut">Choose an image.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="icon">📄➡️🖼️</div>
+        <h3>PDF → Images</h3>
+        <p>Prepare a PDF for page-image conversion. Full rendering needs a PDF engine.</p>
+        <input id="pdfImgFile" type="file" accept="application/pdf">
+        <button class="btn primary" onclick="pdfToImages()">Check PDF</button>
+        <div class="ai-output" id="pdfImgOut">Choose a PDF.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="icon">📚</div>
+        <h3>PDF Merge / Split</h3>
+        <p>Select multiple PDFs for merge/split workflow.</p>
+        <input id="pdfMergeFiles" type="file" accept="application/pdf" multiple>
+        <button class="btn primary" onclick="pdfMergeSplit()">Prepare</button>
+        <div class="ai-output" id="pdfMergeOut">Choose PDF files.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="icon">↔️</div>
+        <h3>Image Resize</h3>
+        <p>Resize an image locally and download it.</p>
+        <input id="resizeFile" type="file" accept="image/*">
+        <input id="resizeWidth" type="number" placeholder="Width (px)">
+        <input id="resizeHeight" type="number" placeholder="Height (px)">
+        <button class="btn primary" onclick="resizeImage()">Resize</button>
+        <div class="ai-output" id="resizeOut">Choose an image.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="icon">✂️</div>
+        <h3>Image Crop</h3>
+        <p>Quick center-crop an image to a chosen aspect ratio.</p>
+        <input id="cropFile" type="file" accept="image/*">
+        <select id="cropRatio">
+          <option value="1">Square 1:1</option>
+          <option value="1.7777778">Landscape 16:9</option>
+          <option value=".75">Portrait 3:4</option>
+        </select>
+        <button class="btn primary" onclick="cropImage()">Crop & Download</button>
+        <div class="ai-output" id="cropOut">Choose an image.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="icon">🔄</div>
+        <h3>JPG ↔ PNG</h3>
+        <p>Convert common image formats in your browser.</p>
+        <input id="convertFile" type="file" accept="image/*">
+        <select id="convertType"><option value="image/png">PNG</option><option value="image/jpeg">JPG</option></select>
+        <button class="btn primary" onclick="convertImage()">Convert</button>
+        <div class="ai-output" id="convertOut">Choose an image.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="icon">🔢</div>
+        <h3>Word Counter</h3>
+        <p>Count words, characters, sentences and reading time.</p>
+        <textarea id="wordText" rows="5" placeholder="Paste your text..."></textarea>
+        <button class="btn primary" onclick="countWords()">Count</button>
+        <div class="ai-output" id="wordOut">Statistics will appear here.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="icon">🔐</div>
+        <h3>Password Generator</h3>
+        <p>Generate a strong random password locally.</p>
+        <input id="passLength" type="number" min="6" max="64" value="16">
+        <button class="btn primary" onclick="generatePassword()">Generate</button>
+        <div class="ai-output" id="passOut">Your password will appear here.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="icon">📷</div>
+        <h3>QR Scanner</h3>
+        <p>Upload a QR image for browser-supported scanning.</p>
+        <input id="qrScanFile" type="file" accept="image/*">
+        <button class="btn primary" onclick="scanQR()">Scan</button>
+        <div class="ai-output" id="qrScanOut">Choose a QR image.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="icon">🔗</div>
+        <h3>URL Shortener</h3>
+        <p>Prepare a short-link request without exposing credentials.</p>
+        <input id="shortUrl" type="url" placeholder="https://example.com/long-link">
+        <button class="btn primary" onclick="shortenURL()">Shorten</button>
+        <div class="ai-output" id="shortOut">Enter a URL.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="pricing">
+
+<span class="section-tag">PLANS</span>
+
+<h2>Simple Pricing</h2>
+
+<p class="sub">
+Choose a plan that fits your needs.
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Free</h3>
+
+<div class="price">$0</div>
+
+<p>
+Free tools<br>
+Basic resources<br>
+Community support
+</p>
+
+<button
+class="btn primary"
+onclick="openModal('signup')">
+Start Free
+</button>
+
+</div>
+
+
+<div class="card featured">
+
+<h3>Pro</h3>
+
+<div class="price">$9</div>
+
+<p>
+All free features<br>
+Premium resources<br>
+Priority support
+</p>
+
+<button
+class="btn primary"
+onclick="alert('Demo plan selected. Add a payment provider before accepting payments.')">
+Choose Pro
+</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>Business</h3>
+
+<div class="price">$29</div>
+
+<p>
+Business tools<br>
+Custom services<br>
+Priority assistance
+</p>
+
+<button
+class="btn primary"
+onclick="alert('Demo plan selected. Add a payment provider before accepting payments.')">
+Choose Business
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="reviews">
+
+<span class="section-tag">
+TRUST & FEEDBACK
+</span>
+
+<h2>Why People Choose Us</h2>
+
+<p class="sub">
+A simple, friendly place for useful online tools and digital support.
+</p>
+
+<div class="grid">
+
+<div class="card testimonial">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“Clean tools, easy to use, and everything is in one place.”
+</p>
+
+<b>— Happy User</b>
+
+</div>
+
+
+<div class="card testimonial">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“The WhatsApp ordering makes it simple to ask for a service.”
+</p>
+
+<b>— Small Business Owner</b>
+
+</div>
+
+
+<div class="card testimonial">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“A great starting point for online business resources.”
+</p>
+
+<b>— Online Creator</b>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="faq">
+
+<span class="section-tag">
+HELP CENTER
+</span>
+
+<h2>
+Frequently Asked Questions
+</h2>
+
+<p class="sub">
+Quick answers before you get started.
+</p>
+
+<div class="faq">
+
+<details>
+
+<summary>
+Are the online tools free?
+</summary>
+
+<p>
+Yes. The tools on this platform are designed to work directly in your browser.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+How can I order a service?
+</summary>
+
+<p>
+Choose a service and use the WhatsApp button to send an order request.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Can I customize the services and prices?
+</summary>
+
+<p>
+Yes. You can replace the current prices and descriptions with your real offers.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Is the login system real?
+</summary>
+
+<p>
+The current login/signup is a demo. A real account system needs a secure backend and database.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+
+<section id="affiliate">
+
+<span class="section-tag">
+RESOURCES
+</span>
+
+<h2>
+Recommended Resources
+</h2>
+
+<p class="sub">
+Add useful and legitimate resources for your visitors.
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+💻 Hosting
+</h3>
+
+<p>
+Place your hosting recommendation here.
+</p>
+
+<a
+class="btn primary"
+href="#contact">
+Add Recommendation
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+🧰 Software
+</h3>
+
+<p>
+Recommend useful software that matches your audience.
+</p>
+
+<a
+class="btn primary"
+href="#contact">
+Add Recommendation
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+📚 Learning
+</h3>
+
+<p>
+Share useful courses and educational resources.
+</p>
+
+<a
+class="btn primary"
+href="#contact">
+Add Recommendation
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="contact">
+
+<div class="cta">
+
+<span class="section-tag">
+GET IN TOUCH
+</span>
+
+<h2>
+Ready to Build Your Online Business?
+</h2>
+
+<p class="sub">
+Tell us what you need and contact us directly.
+</p>
+
+<button
+class="btn primary"
+onclick="openModal('contact')">
+Contact Us
+</button>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<b>
+Ahmad Online Hub
+</b>
+
+<p>
+Free tools • Digital services • Online resources
+• WhatsApp: +92 306 1050895
+</p>
+
+<div class="footer-links">
+
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#tools">Tools</a>
+<a href="#reviews">Reviews</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+<p>
+© 2026 Ahmad Online Hub. All rights reserved.
+</p>
+
+  </footer>
+  <!-- LOGIN / SIGNUP / CONTACT MODAL -->
+
+<div class="modal-bg" id="modal">
+
+<div class="modal">
+
+<button
+class="close"
+onclick="closeModal()">
+×
+</button>
+
+<div id="modalContent"></div>
+
+</div>
+
+</div>
+
+
+
+<!-- Real authentication: Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/*
+  Add your PUBLIC Supabase project URL and ANON/PUBLISHABLE key here.
+  NEVER put a Supabase service-role key in this file.
+*/
+const SUPABASE_URL = "https://dpevdntyygdpblvymbmt.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_cRoFEc05iFavN1X1eV59LQ_zd2y6CVP";
+let supabaseClient = null;
+
+if (SUPABASE_URL !== "YOUR_SUPABASE_URL" &&
+    SUPABASE_ANON_KEY !== "YOUR_SUPABASE_ANON_KEY" &&
+    window.supabase) {
+  supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+}
+
+async function realSignup(){
+  if(!supabaseClient){
+    alert("Supabase is not configured yet. Add your Project URL and Publishable/Anon key in index.html.");
+    return;
+  }
+  const name = document.getElementById("signupName")?.value.trim();
+  const email = document.getElementById("signupEmail")?.value.trim();
+  const password = document.getElementById("signupPassword")?.value;
+  if(!name || !email || !password){ alert("Please fill all fields."); return; }
+  if(password.length < 6){ alert("Password must be at least 6 characters."); return; }
+
+  const {data, error} = await supabaseClient.auth.signUp({
+    email, password,
+    options: { data: { full_name: name } }
+  });
+  if(error){ alert(error.message); return; }
+
+  if(data.user && !data.session){
+    alert("Account created. Check your email to confirm your account.");
+  }else{
+    alert("Account created and you are signed in.");
+    closeModal();
+  }
+}
+
+async function realLogin(){
+  if(!supabaseClient){
+    alert("Supabase is not configured yet. Add your Project URL and Publishable/Anon key in index.html.");
+    return;
+  }
+  const email = document.getElementById("loginEmail")?.value.trim();
+  const password = document.getElementById("loginPassword")?.value;
+  if(!email || !password){ alert("Enter your email and password."); return; }
+
+  const {error} = await supabaseClient.auth.signInWithPassword({email, password});
+  if(error){ alert(error.message); return; }
+
+  alert("Login successful.");
+  closeModal();
+  updateAuthButton();
+}
+
+
+async function realResetPassword(){
+  if(!supabaseClient){ alert("Supabase is not configured yet."); return; }
+  const email = prompt("Enter your account email:");
+  if(!email) return;
+  const {error} = await supabaseClient.auth.resetPasswordForEmail(email, {
+    redirectTo: window.location.origin + window.location.pathname
+  });
+  if(error) alert(error.message);
+  else alert("Password reset email sent. Check your inbox.");
+}
+
+async function realLogout(){
+  if(!supabaseClient) return;
+  await supabaseClient.auth.signOut();
+  updateAuthButton();
+}
+
+async function updateAuthButton(){
+  const btn = document.querySelector('.top-actions .btn.white');
+  if(!btn || !supabaseClient) return;
+  const {data:{session}} = await supabaseClient.auth.getSession();
+  if(session){
+    btn.textContent = "Logout";
+    btn.onclick = realLogout;
+  }else{
+    btn.textContent = "Login";
+    btn.onclick = () => openModal('login');
+  }
+}
+
+if(supabaseClient){
+  supabaseClient.auth.onAuthStateChange(() => updateAuthButton());
+  updateAuthButton();
+}
+</script>
+
+<script>
+
+/* =========================
+   DARK / LIGHT MODE
+========================= */
+
+function toggleTheme(){
+
+document.body.classList.toggle('dark');
+
+let dark =
+document.body.classList.contains('dark');
+
+document.getElementById('themeBtn').textContent =
+dark ? '☀️' : '🌙';
+
+localStorage.setItem(
+'ahmadTheme',
+dark ? 'dark' : 'light'
+);
+
+}
+
+
+/* Load saved theme */
+
+if(localStorage.getItem('ahmadTheme') === 'dark'){
+
+document.body.classList.add('dark');
+
+document.getElementById('themeBtn').textContent='☀️';
+
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+function toggleNav(){
+
+let nav =
+document.getElementById('navlinks');
+
+nav.classList.toggle('open');
+
+}
+
+
+/* Close mobile menu after clicking link */
+
+document.querySelectorAll('.navlinks a')
+.forEach(function(link){
+
+link.addEventListener('click',function(){
+
+document.getElementById('navlinks')
+.classList.remove('open');
+
+});
+
+});
+
+
+/* =========================
+   MODAL
+========================= */
+
+function openModal(type){
+
+let c='';
+
+
+if(type==='login'){
+
+c=`
+
+<h2>Login</h2>
+
+<p>Sign in to your Ahmad Online Hub account.</p>
+
+<input
+id="loginEmail"
+type="email"
+placeholder="Email">
+
+<input
+id="loginPassword"
+type="password"
+placeholder="Password">
+
+<button
+class="btn primary"
+onclick="realLogin()">
+Login
+</button>
+
+<p>
+Don't have an account?
+<a href="#"
+onclick="openModal('signup');return false;">
+Create one
+</a>
+</p>
+
+`;
+
+}
+
+
+if(type==='signup'){
+
+c=`
+
+<h2>Create Account</h2>
+
+<p>Create your real account securely.</p>
+
+<input
+id="signupName"
+placeholder="Your name">
+
+<input
+id="signupEmail"
+type="email"
+placeholder="Email">
+
+<input
+id="signupPassword"
+type="password"
+placeholder="Password">
+
+<button
+class="btn primary"
+onclick="realSignup()">
+Create Account
+</button>
+
+`;
+
+}
+
+
+if(type==='contact'){
+
+c=`
+
+<h2>Contact Us</h2>
+
+<input
+id="contactName"
+placeholder="Name">
+
+<input
+id="contactEmail"
+type="email"
+placeholder="Email">
+
+<textarea
+id="contactMessage"
+rows="5"
+placeholder="Message"></textarea>
+
+<button
+class="btn primary"
+onclick="sendContact()">
+Send Message
+</button>
+
+`;
+
+}
+
+
+document.getElementById('modalContent').innerHTML=c;
+
+document.getElementById('modal').style.display='flex';
+
+}
+
+
+/* Close modal */
+
+function closeModal(){
+
+document.getElementById('modal').style.display='none';
+
+}
+
+
+/* Close modal by clicking outside */
+
+document.getElementById('modal').addEventListener(
+'click',
+function(e){
+
+if(e.target === this){
+
+closeModal();
+
+}
+
+});
+
+
+/* =========================
+   DEMO LOGIN
+========================= */
+
+function demoLogin(){
+
+let email =
+document.getElementById('loginEmail').value.trim();
+
+if(!email){
+
+alert('Please enter your email.');
+
+return;
+
+}
+
+document.getElementById('welcome').textContent =
+'Welcome, '+email+'!';
+
+document.getElementById('dashboard').style.display='block';
+
+closeModal();
+
+location.hash='home';
+
+}
+
+
+/* =========================
+   DEMO SIGNUP
+========================= */
+
+function demoSignup(){
+
+let name =
+document.getElementById('signupName').value.trim();
+
+if(!name){
+
+alert('Please enter your name.');
+
+return;
+
+}
+
+document.getElementById('welcome').textContent =
+'Welcome, '+name+'!';
+
+document.getElementById('dashboard').style.display='block';
+
+closeModal();
+
+location.hash='home';
+
+}
+
+
+/* Logout */
+
+function logout(){
+
+document.getElementById('dashboard').style.display='none';
+
+}
+
+
+/* =========================
+   CALCULATOR
+========================= */
+
+function calculate(){
+
+let v =
+document.getElementById('calc').value.trim();
+
+let o =
+document.getElementById('calcOut');
+
+if(!v){
+
+o.textContent='Enter a calculation.';
+
+return;
+
+}
+
+
+/* Only allow calculator characters */
+
+if(!/^[0-9+\-*/().%\s]+$/.test(v)){
+
+o.textContent='Invalid calculation.';
+
+return;
+
+}
+
+try{
+
+let result =
+Function('return ('+v+')')();
+
+if(!Number.isFinite(result)){
+
+o.textContent='Invalid result.';
+
+return;
+
+}
+
+o.textContent =
+'Result: '+result;
+
+}
+
+catch(e){
+
+o.textContent='Invalid calculation.';
+
+}
+
+}
+
+
+/* =========================
+   WORD COUNTER
+========================= */
+
+document.getElementById('text')
+.addEventListener(
+'input',
+function(){
+
+let t=this.value.trim();
+
+let words =
+t ? t.split(/\s+/).length : 0;
+
+let chars =
+this.value.length;
+
+document.getElementById('count').textContent =
+'Words: '+words+
+' | Characters: '+chars;
+
+});
+
+
+/* =========================
+   PASSWORD GENERATOR
+========================= */
+
+function password(){
+
+let chars =
+'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%';
+
+let p='';
+
+let n =
+Number(document.getElementById('len').value);
+
+if(!n){
+
+n=12;
+
+}
+
+for(let i=0;i<n;i++){
+
+let r;
+
+if(window.crypto &&
+window.crypto.getRandomValues){
+
+let array =
+new Uint32Array(1);
+
+window.crypto.getRandomValues(array);
+
+r =
+array[0]/4294967296;
+
+}else{
+
+r=Math.random();
+
+}
+
+p +=
+chars[Math.floor(r*chars.length)];
+
+}
+
+document.getElementById('pass').textContent=p;
+
+}
+
+
+/* =========================
+   AGE CALCULATOR
+========================= */
+
+function age(){
+
+let value =
+document.getElementById('dob').value;
+
+let output =
+document.getElementById('ageOut');
+
+if(!value){
+
+output.textContent='Select your date of birth.';
+
+return;
+
+}
+
+let d =
+new Date(value);
+
+let today =
+new Date();
+
+if(isNaN(d.getTime())){
+
+output.textContent='Invalid date.';
+
+return;
+
+}
+
+if(d > today){
+
+output.textContent='Birth date cannot be in the future.';
+
+return;
+
+}
+
+let years =
+today.getFullYear()-d.getFullYear();
+
+let month =
+today.getMonth()-d.getMonth();
+
+if(
+month < 0 ||
+(month===0 &&
+today.getDate()<d.getDate())
+){
+
+years--;
+
+}
+
+output.textContent =
+'Age: '+years+' years';
+
+}
+
+
+/* =========================
+   KM TO MILES
+========================= */
+
+function convert(){
+
+let k =
+Number(document.getElementById('km').value);
+
+let output =
+document.getElementById('conv');
+
+if(isNaN(k)){
+
+output.textContent='Enter a number.';
+
+return;
+
+}
+
+output.textContent =
+(k*0.621371).toFixed(3)+' miles';
+
+}
+
+
+/* =========================
+   PERCENTAGE
+========================= */
+
+function percent(){
+
+let p =
+Number(document.getElementById('pct').value);
+
+let n =
+Number(document.getElementById('num').value);
+
+let output =
+document.getElementById('pctOut');
+
+if(
+isNaN(p) ||
+isNaN(n)
+){
+
+output.textContent='Enter both values.';
+
+return;
+
+}
+
+output.textContent =
+((p/100)*n).toFixed(2);
+
+}
+
+
+/* =========================
+   BMI CALCULATOR
+========================= */
+
+function bmi(){
+
+let weight =
+Number(document.getElementById('weight').value);
+
+let height =
+Number(document.getElementById('height').value);
+
+let output =
+document.getElementById('bmiOut');
+
+if(
+!weight ||
+!height ||
+weight<=0 ||
+height<=0
+){
+
+output.textContent =
+'Enter valid weight and height.';
+
+return;
+
+}
+
+let meters =
+height/100;
+
+let value =
+weight/(meters*meters);
+
+let category='';
+
+if(value < 18.5){
+
+category='Underweight';
+
+}else if(value < 25){
+
+category='Normal weight';
+
+}else if(value < 30){
+
+category='Overweight';
+
+}else{
+
+category='Obesity';
+
+}
+
+output.textContent =
+'BMI: '+value.toFixed(1)+
+' — '+category;
+
+}
+
+
+/* =========================
+   CASE CONVERTER
+========================= */
+
+function upperCase(){
+
+let text =
+document.getElementById('caseText').value;
+
+document.getElementById('caseOut').textContent =
+text.toUpperCase();
+
+}
+
+
+function lowerCase(){
+
+let text =
+document.getElementById('caseText').value;
+
+document.getElementById('caseOut').textContent =
+text.toLowerCase();
+
+}
+
+
+/* =========================
+   RANDOM NUMBER
+========================= */
+
+function randomNumber(){
+
+let min =
+Number(document.getElementById('minNum').value);
+
+let max =
+Number(document.getElementById('maxNum').value);
+
+let output =
+document.getElementById('randomOut');
+
+if(
+isNaN(min) ||
+isNaN(max)
+){
+
+output.textContent =
+'Enter minimum and maximum.';
+
+return;
+
+}
+
+if(min > max){
+
+let temp=min;
+
+min=max;
+
+max=temp;
+
+}
+
+let result =
+Math.floor(
+Math.random()*(max-min+1)
+)+min;
+
+output.textContent =
+'Random number: '+result;
+
+}
+
+
+/* =========================
+   TOOL SEARCH
+========================= */
+
+function searchTools(){
+
+let search =
+document.getElementById('toolSearch')
+.value
+.toLowerCase()
+.trim();
+
+let tools =
+document.querySelectorAll('.tool');
+
+let found=0;
+
+tools.forEach(function(tool){
+
+let name =
+(tool.dataset.name || '')
+.toLowerCase();
+
+if(
+name.includes(search)
+){
+
+tool.classList.remove('hidden');
+
+found++;
+
+}else{
+
+tool.classList.add('hidden');
+
+}
+
+});
+
+
+let noTools =
+document.getElementById('noTools');
+
+noTools.style.display =
+found===0 ? 'block' : 'none';
+
+}
+
+
+
+
+/* =========================
+   PHASE 5 — 12 AI TOOLS
+========================= */
+
+function searchAITools(value){
+  const q=(value!==undefined?value:document.getElementById('aiToolSearch').value).toLowerCase().trim();
+  const cards=document.querySelectorAll('.ai-tool-card');
+  let found=0;
+  cards.forEach(c=>{
+    const ok=(c.dataset.aiName||'').toLowerCase().includes(q);
+    c.style.display=ok?'block':'none';
+    if(ok) found++;
+  });
+  const out=document.getElementById('searchOut');
+  if(out) out.textContent=q ? `${found} tool${found===1?'':'s'} found for "${q}".` : 'Start typing to filter the AI hub.';
+}
+
+function aiChatDemo(){
+  const v=document.getElementById('chatInput').value.trim();
+  document.getElementById('chatOut').textContent=v
+    ? 'AI Chat UI is ready. Connect your secure AI backend/API to generate real responses.'
+    : 'Type a message first.';
+}
+function aiWriter(){
+  const v=document.getElementById('writerTopic').value.trim();
+  const tone=document.getElementById('writerTone').value;
+  document.getElementById('writerOut').textContent=v
+    ? `AI Writer (${tone})\n\n${v}\n\nSuggested structure:\n• Strong opening\n• Main benefit or message\n• Useful details\n• Clear call-to-action\n\nConnect a secure AI API for automatic generation.`
+    : 'Enter a topic first.';
+}
+function buildImagePrompt(){
+  const v=document.getElementById('imagePrompt').value.trim();
+  document.getElementById('imageOut').textContent=v
+    ? `Image prompt:\n${v}\n\nStyle: modern, high quality, clean composition, professional lighting, suitable for a digital business website.\n\nConnect a secure image-generation API for actual image creation.`
+    : 'Enter an image idea first.';
+}
+function backgroundTool(){
+  const f=document.getElementById('bgFile').files[0], out=document.getElementById('bgOut');
+  if(!f){out.textContent='Choose an image first.';return;}
+  const url=URL.createObjectURL(f);
+  out.innerHTML=`<img src="${url}" alt="Selected image" style="max-width:100%;border-radius:10px"><div style="margin-top:8px">Image loaded. True automatic background removal requires a background-removal engine/API.</div>`;
+}
+function pdfTool(){
+  const f=document.getElementById('pdfFile').files[0];
+  document.getElementById('pdfOut').textContent=f
+    ? `PDF selected: ${f.name} (${(f.size/1024).toFixed(1)} KB). Advanced merge/split/extract features can be connected with a PDF library/backend.`
+    : 'Choose a PDF file.';
+}
+function makeQR2(){
+  const v=document.getElementById('qrText2').value.trim(), out=document.getElementById('qrOut2');
+  if(!v){out.textContent='Enter text or a URL.';return;}
+  out.innerHTML=`<img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(v)}" width="180" height="180" alt="QR code"><div style="margin-top:8px">QR code generated.</div>`;
+}
+function compressImage2(){
+  const f=document.getElementById('compressFile2').files[0], q=Number(document.getElementById('compressQuality2').value), out=document.getElementById('compressOut2');
+  if(!f){out.textContent='Choose an image.';return;}
+  const r=new FileReader();
+  r.onload=e=>{
+    const img=new Image();
+    img.onload=()=>{
+      const max=1800,s=Math.min(1,max/Math.max(img.width,img.height));
+      const c=document.createElement('canvas'); c.width=Math.round(img.width*s);c.height=Math.round(img.height*s);
+      c.getContext('2d').drawImage(img,0,0,c.width,c.height);
+      c.toBlob(b=>{
+        const url=URL.createObjectURL(b);
+        out.innerHTML=`<a class="btn primary" href="${url}" download="ahmad-compressed.jpg">⬇️ Download</a><div style="margin-top:8px">${(f.size/1024).toFixed(1)} KB → ${(b.size/1024).toFixed(1)} KB</div>`;
+      },'image/jpeg',q);
+    };
+    img.src=e.target.result;
+  }; r.readAsDataURL(f);
+}
+function speak2(){
+  const t=document.getElementById('tts2').value.trim(), s=document.getElementById('ttsStatus2');
+  if(!t){s.textContent='Enter text first.';return;}
+  if(!('speechSynthesis' in window)){s.textContent='Not supported in this browser.';return;}
+  speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(t); speechSynthesis.speak(u); s.textContent='Speaking…'; u.onend=()=>s.textContent='Finished.';
+}
+function stop2(){if('speechSynthesis' in window)speechSynthesis.cancel();document.getElementById('ttsStatus2').textContent='Stopped.';}
+function speech2(){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition,out=document.getElementById('speechOut2');
+  if(!SR){out.textContent='Speech recognition is not supported in this browser.';return;}
+  const r=new SR();r.lang='en-US';r.interimResults=true;r.onresult=e=>{let t='';for(let i=e.resultIndex;i<e.results.length;i++)t+=e.results[i][0].transcript;out.textContent=t;};r.onerror=e=>out.textContent='Microphone error: '+e.error;r.start();
+}
+function translateDemo(){
+  const t=document.getElementById('transText').value.trim(), lang=document.getElementById('transLang').value;
+  document.getElementById('transOut').textContent=t
+    ? `Translation target: ${lang}\n\nTranslation API is not connected yet. Connect a secure translation service for real-time translation.`
+    : 'Enter text first.';
+}
+function mobileInfo(){
+  document.getElementById('mobileOut').textContent=`Screen width: ${window.innerWidth}px • Responsive layout active • Dark mode supported.`;
+}
+
+
+/* =========================
+   MORE FREE TOOLS
+========================= */
+
+function loadImageFile(input, cb){
+  const f=input.files[0];
+  if(!f){ cb(null,null); return; }
+  const r=new FileReader();
+  r.onload=e=>{const img=new Image();img.onload=()=>cb(img,f);img.src=e.target.result;};
+  r.readAsDataURL(f);
+}
+function downloadBlob(blob,name){
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();
+}
+function imageToPDF(){
+  loadImageFile(document.getElementById('imgPdfFile'),(img,f)=>{
+    const c=document.createElement('canvas');c.width=img.width;c.height=img.height;
+    c.getContext('2d').drawImage(img,0,0);
+    const data=c.toDataURL('image/jpeg',.92);
+    const w=window.open('','_blank');
+    if(!w){document.getElementById('imgPdfOut').textContent='Allow pop-ups to create the printable PDF.';return;}
+    w.document.write(`<html><head><title>Ahmad Online Hub - Image PDF</title></head><body style="margin:0;text-align:center"><img src="${data}" style="max-width:100%;max-height:100vh" onload="window.print()"></body></html>`);
+    w.document.close();
+    document.getElementById('imgPdfOut').textContent='Printable PDF view opened. Choose “Save as PDF”.';
+  });
+}
+function pdfToImages(){
+  const f=document.getElementById('pdfImgFile').files[0];
+  document.getElementById('pdfImgOut').textContent=f
+    ? `Selected ${f.name}. Full PDF page rendering requires a PDF library/engine.`
+    : 'Choose a PDF.';
+}
+function pdfMergeSplit(){
+  const fs=[...document.getElementById('pdfMergeFiles').files],out=document.getElementById('pdfMergeOut');
+  out.textContent=fs.length?`${fs.length} PDF file(s) selected. A PDF library/backend is required for actual merge/split output.`:'Choose PDF files.';
+}
+function resizeImage(){
+  const w=parseInt(document.getElementById('resizeWidth').value),h=parseInt(document.getElementById('resizeHeight').value);
+  loadImageFile(document.getElementById('resizeFile'),(img)=>{
+    if(!img){document.getElementById('resizeOut').textContent='Choose an image.';return;}
+    if(!w||!h){document.getElementById('resizeOut').textContent='Enter width and height.';return;}
+    const c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(img,0,0,w,h);
+    c.toBlob(b=>{downloadBlob(b,'ahmad-resized-image.jpg');document.getElementById('resizeOut').textContent='Resized image downloaded.';},'image/jpeg',.9);
+  });
+}
+function cropImage(){
+  const ratio=Number(document.getElementById('cropRatio').value);
+  loadImageFile(document.getElementById('cropFile'),(img)=>{
+    if(!img)return;
+    let sw=img.width,sh=Math.round(sw/ratio);
+    if(sh>img.height){sh=img.height;sw=Math.round(sh*ratio);}
+    const sx=Math.round((img.width-sw)/2),sy=Math.round((img.height-sh)/2);
+    const c=document.createElement('canvas');c.width=sw;c.height=sh;
+    c.getContext('2d').drawImage(img,sx,sy,sw,sh,0,0,sw,sh);
+    c.toBlob(b=>{downloadBlob(b,'ahmad-cropped-image.jpg');document.getElementById('cropOut').textContent='Cropped image downloaded.';},'image/jpeg',.92);
+  });
+}
+function convertImage(){
+  const type=document.getElementById('convertType').value;
+  loadImageFile(document.getElementById('convertFile'),(img)=>{
+    if(!img)return;
+    const c=document.createElement('canvas');c.width=img.width;c.height=img.height;c.getContext('2d').drawImage(img,0,0);
+    c.toBlob(b=>{downloadBlob(b,type==='image/png'?'ahmad-image.png':'ahmad-image.jpg');document.getElementById('convertOut').textContent='Converted image downloaded.';},type,.92);
+  });
+}
+function countWords(){
+  const t=document.getElementById('wordText').value.trim(),words=t?t.split(/\s+/).length:0,chars=t.length;
+  const sentences=t?t.split(/[.!?]+/).filter(x=>x.trim()).length:0;
+  const mins=words?Math.max(1,Math.ceil(words/200)):0;
+  document.getElementById('wordOut').textContent=`Words: ${words}\nCharacters: ${chars}\nSentences: ${sentences}\nEstimated reading time: ${mins} min`;
+}
+function generatePassword(){
+  const n=Math.min(64,Math.max(6,parseInt(document.getElementById('passLength').value)||16));
+  const chars='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%^&*_-+=';
+  const a=new Uint32Array(n);crypto.getRandomValues(a);
+  let p='';a.forEach(x=>p+=chars[x%chars.length]);
+  document.getElementById('passOut').textContent=p;
+}
+function scanQR(){
+  const f=document.getElementById('qrScanFile').files[0],out=document.getElementById('qrScanOut');
+  if(!f){out.textContent='Choose a QR image.';return;}
+  out.textContent='QR scanning needs a QR decoder library. The upload interface is ready; connect a decoder such as a client-side QR library for automatic detection.';
+}
+function shortenURL(){
+  const u=document.getElementById('shortUrl').value.trim(),out=document.getElementById('shortOut');
+  if(!u){out.textContent='Enter a URL.';return;}
+  try{new URL(u);out.textContent='URL is valid. A real short link requires a URL-shortening API/backend.';}
+  catch(e){out.textContent='Please enter a valid URL.';}
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+function sendContact(){
+
+let name =
+document.getElementById('contactName').value.trim();
+
+let message =
+document.getElementById('contactMessage').value.trim();
+
+if(!name || !message){
+
+alert(
+'Please enter your name and message.'
+);
+
+return;
+
+}
+
+
+/*
+Open WhatsApp with the message.
+*/
+
+let text =
+'Assalam o Alaikum, my name is '+
+name+
+'.%0A%0A'+
+message;
+
+window.open(
+'https://wa.me/923061050895?text='+
+encodeURIComponent(
+'Assalam o Alaikum, my name is '+
+name+
+'.\n\n'+
+message
+),
+'_blank'
+);
+
+closeModal();
+
+}
+
+
+/* =========================
+   ESCAPE KEY
+========================= */
+
+document.addEventListener(
+'keydown',
+function(e){
+
+if(e.key==='Escape'){
+
+closeModal();
+
+}
+
+});
+
+</script>
+
+
+<!-- FLOATING WHATSAPP BUTTON -->
+
+<a
+class="whatsapp-float"
+href="https://wa.me/923061050895?text=Assalam%20o%20Alaikum%2C%20I%20want%20to%20know%20about%20your%20services."
+target="_blank"
+rel="noopener">
+
+💬 WhatsApp
+
+</a>
+
+
+</body>
+</html>
